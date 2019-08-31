@@ -1,8 +1,18 @@
 .App {
   text-align: center;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
+}
+.header{
+  width: 100%;
+  height: 10%;
+}
+.workspace {
+  width: 100%;
+  height: 90%;
+  display: flex;
 }
 
 .App-header {
