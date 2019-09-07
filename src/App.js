@@ -1,18 +1,16 @@
 import React from 'react';
-import Chat from './components/chat/chat.component';
-import Dashboard from './components/dashboard/dashboard.component';
-import Header from './components/header/header.component';
+import Assessment from './components/assessment/assessment.component';
+import NavBar from './components/navBar/navBar.component';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <div class="header">
-        <Header />
+        <NavBar />
       </div>
       <div class="workspace">
-        <Dashboard />
-        <Chat />
+        <Assessment />
       </div>
       
     </div>
