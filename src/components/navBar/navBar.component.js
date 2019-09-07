@@ -13,6 +13,10 @@ class NavBar extends React.Component {
   changeComponent(comp) {
     userDetails.setCurrentComponent(comp);
   }
+
+  login(flag) {
+    userDetails.setIsLoggedIn(flag);
+  }
   
   render() {
     return (
@@ -20,6 +24,8 @@ class NavBar extends React.Component {
             <input type="button" value="Assessment" onClick={e => this.changeComponent('assessment')} />
             <input type="button" value="To Do" onClick={e => this.changeComponent('toDo')} />
             <input type="button" value="My Rating" onClick={e => this.changeComponent('myRating')} />
+            <input type="button" value="Log Out" onClick={e => this.login(false)} />
+            <input type="button" value="Log In" onClick={e => this.login(true)} />
         </div>
     )
   }
