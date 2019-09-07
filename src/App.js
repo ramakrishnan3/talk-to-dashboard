@@ -1,19 +1,10 @@
 import React from 'react';
-import Assessment from './components/assessment/assessment.component';
-import NavBar from './components/navBar/navBar.component';
+import Main from './components/main/main.component';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <div class="header">
-        <NavBar />
-      </div>
-      <div class="workspace">
-        <Assessment />
-      </div>
-      
-    </div>
+      <Main />
   );
 }
 
