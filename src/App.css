@@ -8,6 +8,7 @@
 .header{
   width: 100%;
   height: 10%;
+  display: flex;
 }
 .workspace {
   width: 100%;

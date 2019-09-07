@@ -16,10 +16,20 @@ class NavBar extends React.Component {
   
   render() {
     return (
-        <div className="navBar-container">
-            <input type="button" value="Assessment" onClick={e => this.changeComponent('assessment')} />
-            <input type="button" value="To Do" onClick={e => this.changeComponent('toDo')} />
-            <input type="button" value="My Rating" onClick={e => this.changeComponent('myRating')} />
+        <div className = "navBar-container">
+          <div className = "inner-navBar-container">
+            <div className = "logo-container">
+            <img src={require('./logo.png')}></img>
+            <h1>GROOT</h1>
+            </div>
+            <ul className = "navigation">
+              <a  onClick={e => this.changeComponent('assessment')}><li>Assessment</li></a>
+              <a onClick={e => this.changeComponent('toDo')}><li>To-Do</li></a>
+              <a onClick={e => this.changeComponent('myRating')}><li>My Rating</li></a>
+              <a><li>Login</li></a>
+              <a><li>Logout</li></a> 
+            </ul>
+          </div>
         </div>
     )
   }
