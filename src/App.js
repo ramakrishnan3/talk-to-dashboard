@@ -7,12 +7,15 @@ import {AsyncStorage} from 'AsyncStorage';
 import userDetails from './store/userDetails';
 
 class App extends React.Component {
-  componentDidMount() {
-    AsyncStorage.getItem('IsLoggedIn').then((isLoggedIn)=>{
-      if(isLoggedIn) {
-        userDetails.setIsLoggedIn(false);
+
+  constructor() {
+    super();
+    AsyncStorage.getItem('isLoggedIn').then((isLoggedIn)=>{
+      console.log(isLoggedIn);      
+      if(isLoggedIn === 'true') {
+        userDetails.setIsLoggedIn(true);
       } else {
-        userDetails.setIsLoggedIn(true);        
+        userDetails.setIsLoggedIn(false);        
       }
     });
   }
